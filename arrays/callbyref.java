@@ -26,5 +26,6 @@ class callbyref
         {
             System.out.println(arr[i]);
         }
+        sc.close();
     }
 }

@@ -20,5 +20,6 @@ class min_max{
         }
         System.out.println(min);
         System.out.println(max);
+        
     }
 }

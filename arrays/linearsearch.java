@@ -24,5 +24,7 @@ class linearsearch
         {
             System.out.println(pos);
         }
+        sc.close();
     }
+
 }
