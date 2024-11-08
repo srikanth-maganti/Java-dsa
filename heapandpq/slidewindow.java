@@ -20,7 +20,8 @@ public class slidewindow {
     }
     public static void main(String args[])
     {
-        int arr[]={1,3,-1,-3,5,3,6,7};
+        // int arr[]={1,3,-1,-3,5,3,6,7};
+        int arr[]={1,2,3,4,5,6,7,8,9,10};
         int k=3;
         int res[]=new int[arr.length-k+1];
         PriorityQueue<Pair> pq=new PriorityQueue<>();
@@ -33,7 +34,7 @@ public class slidewindow {
 
         for(int i=k;i<arr.length;i++)
         {
-            while(pq.size()>0 && pq.peek().val<=(i-k))
+            while(pq.size()>0 && pq.peek().idx<=(i-k))
             {
                 pq.remove();
             }

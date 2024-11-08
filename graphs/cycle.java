@@ -63,17 +63,14 @@ public class cycle
         for(int i=0;i<graph[curr].size();i++)
         {
             Edge e=graph[curr].get(i);
-            if(!vis[e.dest])
+            if(!vis[e.dest] && detectcycleutil(graph,vis,e.dest,curr))
             {
-                if(detectcycleutil(graph,vis,e.dest,curr))
-                {
-                    return true;
-                }
-                else if(vis[e.dest] && par!=e.dest)
-                {
-                    return true;
-                }
+                    return true; 
             }
+            else if(vis[e.dest] && par!=e.dest)
+             {
+                    return true;
+            } 
         }
         return false;
 
