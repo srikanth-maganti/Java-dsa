@@ -1,4 +1,4 @@
-package dynamic_programming;
+
 
 public class lcs {
     public static int lcs(String str1,String str2,int n,int m)

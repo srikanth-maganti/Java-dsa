@@ -80,6 +80,8 @@ public class kruskal {
 
     public static int kruskalmst(ArrayList<Edge> edges,int n)
     {   init();
+        
+
         Collections.sort(edges);//eloge
         int minocost=0;
         int count=0;

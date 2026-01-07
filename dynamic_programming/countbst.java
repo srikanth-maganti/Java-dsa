@@ -1,4 +1,4 @@
-package dynamic_programming;
+
 
 public class countbst {
     public static int noofbst(int n)

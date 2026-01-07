@@ -1,4 +1,4 @@
-package dynamic_programming;
+
 
 public class mountainranges {
     public static int ranges(int n)

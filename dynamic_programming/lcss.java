@@ -1,4 +1,4 @@
-package dynamic_programming;
+
 
 public class lcss {
     public static int lcsubstring(String str1,String str2)

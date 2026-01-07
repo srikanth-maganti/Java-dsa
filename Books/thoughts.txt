@@ -1,0 +1,18 @@
+Project Ideas:
+-recommendation system in book reading platform (complete mlops)
+-rag for gate
+
+
+
+Research Ideas:
+-two way training
+-weights translator
+
+
+
+Blog ideas:
+-mlops
+-deployment
+
+
+

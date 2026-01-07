@@ -98,5 +98,42 @@ public class dijkstra {
         ArrayList<Edge> graph[]=new ArrayList[6];
         creategraph(graph);
         dijkstra(graph, 0);
+        dijkstra2(graph,0);
+    }
+
+    public static void dijkstra2(ArrayList<Edge> graph[],int src)
+    {
+        int dist[]=new int[graph.length];
+        for(int i=0;i<graph.length;i++)
+        {
+            if(i!=src)
+            {
+                dist[i]=Integer.MAX_VALUE;
+            }
+        }
+        PriorityQueue<Pair> pq=new PriorityQueue<>((a,b)->a.path-b.path);
+        boolean visited[]=new boolean[graph.length];
+        pq.add(new Pair(src,0));
+        while(!pq.isEmpty())
+        {
+            Pair curr=pq.remove();
+            int node=curr.n;
+            visited[node]=true;
+            for(int i=0;i<graph[node].size();i++)
+            {
+                Edge e=graph[node].get(i);
+                int s=e.src;
+                int d=e.dest;
+                int w=e.wt;
+                if(w+dist[node]<dist[d])
+                {
+                    dist[d]=w+dist[node];
+                    pq.add(new Pair(d,dist[d]));
+
+                }
+                
+            }
+        }
+
     }
 }

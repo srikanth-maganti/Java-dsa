@@ -1,4 +1,4 @@
-package dynamic_programming;
+
 
 public class rodcutting {
     public static int maxprofit(int length[],int price[],int totrod)
@@ -38,7 +38,32 @@ public class rodcutting {
         int price[]={1,5,8,9,10,17,17,20};
         int totrod=8;
         System.out.println(maxprofit(length,price,totrod));
-
+        System.out.println(maxprofit1(length,price,totrod));
         
+    }
+
+    public static int maxprofit1(int length[],int price[],int W)
+    {
+        int n=length.length;
+        int dp[][]=new int[n+1][W+1];
+
+        for(int i=1;i<n+1;i++)
+        {
+            for(int j=1;j<W+1;j++)
+            {
+                int val=price[i-1];
+                int len=length[i-1];
+                if(len<=j)
+                {
+                    dp[i][j]=Math.max(val+dp[i][j-len],dp[i-1][j]);
+                }
+                else
+                {
+                    dp[i][j]=dp[i-1][j];
+                }
+
+            }
+        }
+        return dp[n][W];
     }
 }
